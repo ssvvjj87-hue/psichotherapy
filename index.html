@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Артём Ершов — психолог онлайн</title>
+<meta name="description" content="Психолог Артём Ершов. Онлайн-консультации: тревога, самооценка, отношения, выгорание, кризисы. 10 лет практики, 5000+ часов работы. IFS, КПТ, ЭОТ, EMDR.">
+<meta property="og:title" content="Артём Ершов — психолог онлайн">
+<meta property="og:description" content="Помогаю бережно разобраться в том, что болит, и найти решение. Онлайн, 60 минут.">
+<meta property="og:image" content="img/artem-blue.webp">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%231B8A9C'/%3E%3Ctext x='32' y='43' font-size='30' text-anchor='middle' fill='white' font-family='Georgia,serif'%3EА%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Spectral:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mist:#EEF3F1;      /* фон: утренняя вода */
+  --paper:#FFFFFF;
+  --deep:#123A42;      /* основной текст, глубокая вода */
+  --soft:#4D6A70;      /* второстепенный текст */
+  --teal:#1B8A9C;      /* акцент, совпадает с иконками */
+  --teal-dark:#136E7D;
+  --sand:#EADFCB;      /* тёплый акцент: цены, выделения */
+  --line:#D5E1DE;
+  --serif:"Spectral", Georgia, serif;
+  --sans:"Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --wrap:1160px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--mist);color:var(--deep);font:400 17px/1.6 var(--sans)}
+img{max-width:100%;display:block}
+a{color:var(--teal-dark)}
+:focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(32px,4.4vw,52px)}
+h3{font-size:24px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+section{padding:96px 0}
+.lead{font-size:19px;color:var(--soft);max-width:62ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font:500 16px/1 var(--sans);text-decoration:none;border:1.5px solid var(--teal);cursor:pointer;transition:background .2s,color .2s}
+.btn-main{background:var(--teal);color:#fff}
+.btn-main:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
+.btn-ghost{background:transparent;color:var(--teal-dark)}
+.btn-ghost:hover{background:var(--paper)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+/* шапка */
+header{position:sticky;top:0;z-index:20;background:rgba(238,243,241,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:68px}
+.logo{font-family:var(--serif);font-size:22px;color:var(--deep);text-decoration:none;white-space:nowrap}
+.logo small{display:block;font:400 12px/1 var(--sans);color:var(--soft);margin-top:3px}
+nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0}
+nav a{color:var(--deep);text-decoration:none;font-size:15px}
+nav a:hover{color:var(--teal-dark)}
+.bar .btn{min-height:42px;padding:0 18px;font-size:15px}
+.menu-btn{display:none;background:none;border:0;padding:10px;cursor:pointer;color:var(--deep)}
+@media (max-width:980px){
+  nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--mist);border-bottom:1px solid var(--line);padding:12px 20px 20px}
+  nav.open{display:block}
+  nav ul{flex-direction:column;gap:4px}
+  nav a{display:block;padding:10px 0;font-size:18px}
+  .menu-btn{display:block}
+  .bar .btn{display:none}
+}
+
+/* первый экран */
+.hero{padding:56px 0 0;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
+.hero h1{font-size:clamp(40px,5.6vw,72px);margin-bottom:24px}
+.hero .who{font-size:18px;color:var(--soft);margin-bottom:32px;max-width:46ch}
+.hero .who b{color:var(--deep);font-weight:500}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+.facts{display:flex;flex-wrap:wrap;gap:16px 40px;margin:0 0 56px;padding:0}
+.facts div{min-width:120px}
+.facts dt{font-family:var(--serif);font-size:38px;line-height:1;color:var(--teal-dark)}
+.facts dd{margin:6px 0 0;font-size:15px;color:var(--soft)}
+.portrait{position:relative;align-self:end}
+.portrait::before{content:"";position:absolute;left:8%;right:2%;bottom:0;top:12%;background:var(--sand);border-radius:999px 999px 0 0}
+.portrait img{position:relative;width:100%;height:auto}
+@media (max-width:860px){
+  .hero-grid{grid-template-columns:1fr}
+  .portrait{max-width:440px;margin:0 auto}
+  .facts{margin-bottom:24px}
+}
+
+/* лента голосов — главный приём страницы */
+.voices{background:var(--deep);color:#fff;padding:26px 0;overflow:hidden}
+.voices-track{display:flex;gap:48px;width:max-content;animation:drift 70s linear infinite}
+.voices:hover .voices-track{animation-play-state:paused}
+.voices a{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,30px);color:#fff;text-decoration:none;white-space:nowrap;opacity:.92}
+.voices a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.voices a::before{content:"«";color:#7FC6D2}
+.voices a::after{content:"»";color:#7FC6D2}
+@keyframes drift{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .voices-track{animation:none;flex-wrap:wrap;width:auto;padding:0 20px;gap:12px 32px}
+  .voices-track [aria-hidden]{display:none}
+  html{scroll-behavior:auto}
+}
+
+/* когда обращаться */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:56px;align-items:end}
+@media (max-width:860px){.intro{grid-template-columns:1fr;gap:16px}}
+.topics{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.topic{background:var(--paper);padding:28px 24px}
+.topic img{width:56px;height:56px;object-fit:contain;margin-bottom:16px}
+.topic h3{font-size:22px;margin-bottom:12px}
+.topic ul{list-style:none;margin:0;padding:0;font-size:15px;color:var(--soft)}
+.topic li{padding:6px 0;border-top:1px dashed var(--line)}
+@media (max-width:980px){.topics{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.topics{grid-template-columns:1fr}}
+
+/* с чем работаю — вкладки */
+.work{background:var(--paper)}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:40px 0 32px}
+.tabs button{font:500 15px/1 var(--sans);padding:14px 20px;border-radius:999px;border:1.5px solid var(--line);background:var(--mist);color:var(--deep);cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--deep);border-color:var(--deep);color:#fff}
+.panel ul{columns:2;column-gap:56px;margin:0;padding:0;list-style:none}
+.panel li{break-inside:avoid;padding:14px 0 14px 28px;border-bottom:1px solid var(--line);position:relative}
+.panel li::before{content:"";position:absolute;left:0;top:24px;width:12px;height:2px;background:var(--teal)}
+.panel[hidden]{display:none}
+@media (max-width:700px){.panel ul{columns:1}}
+.work .note{margin-top:32px;color:var(--soft);font-size:15px;max-width:70ch}
+
+/* обо мне */
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
+.about-photo{position:sticky;top:100px;background:var(--sand);border-radius:28px 28px 200px 28px;overflow:hidden;padding-top:24px}
+.about-text h2{margin-bottom:28px}
+.about-text .big{font-family:var(--serif);font-size:24px;line-height:1.45;margin-bottom:24px}
+.about-text p{max-width:64ch}
+.methods{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 40px;padding:0;list-style:none}
+.methods li{background:var(--paper);border:1px solid var(--line);padding:8px 16px;border-radius:999px;font-size:15px}
+.qualities{display:grid;gap:24px;margin:0 0 40px}
+.quality{display:grid;grid-template-columns:64px 1fr;gap:20px;align-items:start}
+.quality img{width:64px;height:64px;object-fit:contain;background:var(--paper);border-radius:50%;padding:8px}
+.quality h3{font-size:21px;margin-bottom:4px}
+.quality p{margin:0;color:var(--soft);font-size:16px}
+.proof{list-style:none;margin:0 0 40px;padding:24px 28px;background:var(--paper);border-radius:20px}
+.proof li{padding:8px 0 8px 30px;position:relative}
+.proof li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:600}
+.docs{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.docs button{padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper);cursor:zoom-in;text-align:left}
+.docs img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.docs span{display:block;padding:12px 16px;font:400 14px/1.4 var(--sans);color:var(--soft)}
+@media (max-width:860px){.about-grid{grid-template-columns:1fr;gap:32px}.about-photo{position:static;max-width:420px}}
+dialog{border:0;padding:0;border-radius:12px;max-width:min(1100px,94vw);background:#fff}
+dialog::backdrop{background:rgba(18,58,66,.75)}
+dialog img{max-height:86vh;width:auto;margin:0 auto}
+dialog button{position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;border:0;background:var(--deep);color:#fff;font-size:22px;cursor:pointer}
+
+/* преимущества */
+.why{background:var(--deep);color:#fff}
+.why .lead{color:#B9D3D7}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:48px}
+.why-item{padding:32px 0;border-top:1px solid rgba(255,255,255,.18)}
+.why-item h3{font-size:30px;margin-bottom:12px}
+.why-item p{color:#C9DDE0;margin:0;max-width:48ch}
+@media (max-width:760px){.why-list{grid-template-columns:1fr}}
+
+/* подход */
+.principles{display:grid;grid-template-columns:repeat(2,1fr);gap:0 64px;margin-top:48px}
+.principles div{padding:24px 0;border-top:1px solid var(--line)}
+.principles dt{font-family:var(--serif);font-size:23px;margin-bottom:6px}
+.principles dd{margin:0;color:var(--soft)}
+@media (max-width:760px){.principles{grid-template-columns:1fr}}
+
+/* этапы — настоящая последовательность, поэтому с номерами */
+.steps{background:var(--paper)}
+.steps ol{list-style:none;margin:48px 0 40px;padding:0;counter-reset:s}
+.steps li{counter-increment:s;display:grid;grid-template-columns:96px 1fr;gap:24px;padding:32px 0;border-top:1px solid var(--line)}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:64px;line-height:.9;color:var(--teal)}
+.steps h3{margin-bottom:10px}
+.steps p{margin:0;color:var(--soft);max-width:68ch}
+@media (max-width:600px){.steps li{grid-template-columns:52px 1fr;gap:16px}.steps li::before{font-size:44px}}
+
+/* услуги и цены */
+.offers{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
+.offer{background:var(--paper);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column}
+.offer.first{background:var(--deep);color:#fff}
+.offer.first .meta,.offer.first p{color:#C9DDE0}
+.offer h3{font-size:28px;margin-bottom:12px}
+.offer p{color:var(--soft);font-size:16px;flex:1}
+.offer .meta{font-size:14px;color:var(--soft);margin-bottom:20px}
+.price{font-family:var(--serif);font-size:44px;line-height:1;margin:8px 0 6px}
+.price s{font-size:22px;opacity:.6;margin-left:10px}
+.offer .btn{margin-top:20px}
+.offer.first .btn{background:#fff;color:var(--deep);border-color:#fff}
+@media (max-width:900px){.offers{grid-template-columns:1fr}}
+.packages{margin-top:20px;background:var(--paper);border-radius:24px;padding:36px 32px}
+.packages-head{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-bottom:28px}
+.packages-head p{color:var(--soft);margin:0}
+@media (max-width:760px){.packages-head{grid-template-columns:1fr;gap:12px}}
+.pack-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.pack{border:1.5px solid var(--line);border-radius:18px;padding:22px 20px}
+.pack b{display:block;font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.1}
+.pack .sum{font-size:22px;font-weight:600;margin:14px 0 4px}
+.pack small{display:block;color:var(--soft);font-size:14px;line-height:1.5}
+.pack .save{display:inline-block;margin-top:10px;background:var(--sand);border-radius:999px;padding:4px 12px;font-size:13px}
+@media (max-width:900px){.pack-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:420px){.pack-grid{grid-template-columns:1fr}}
+
+/* отзывы */
+.reviews{background:var(--paper)}
+.rev-track{display:grid;grid-auto-flow:column;grid-auto-columns:min(440px,86vw);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 20px 24px;margin:40px -20px 0}
+.rev{scroll-snap-align:start;background:var(--mist);border-radius:24px;padding:28px}
+.rev blockquote{margin:0 0 16px;font-family:var(--serif);font-size:24px;line-height:1.3}
+.rev .ba{display:grid;gap:12px;font-size:15px}
+.rev .ba h4{margin:0 0 4px;font:600 14px/1.2 var(--sans);color:var(--teal-dark)}
+.rev .ba p{margin:0;color:var(--soft)}
+.rev footer{margin-top:16px;font-size:14px;color:var(--soft)}
+
+/* вопросы */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+details{border-top:1px solid var(--line)}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:22px 40px 22px 0;font-family:var(--serif);font-size:23px;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:18px;font:300 30px/1 var(--sans);color:var(--teal);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .ans{padding:0 0 24px;color:var(--soft);max-width:66ch}
+details .ans ul{padding-left:20px;margin:8px 0 12px}
+@media (max-width:860px){.faq-grid{grid-template-columns:1fr;gap:24px}}
+
+/* финал */
+.final{background:var(--teal);color:#fff;text-align:center}
+.final h2{max-width:18ch;margin:0 auto 20px}
+.final p{max-width:56ch;margin:0 auto 32px;color:#E2F3F5;font-size:19px}
+.final .btn-main{background:#fff;color:var(--deep);border-color:#fff}
+.final .btn-ghost{color:#fff;border-color:#fff}
+.final .btn-ghost:hover{background:rgba(255,255,255,.12)}
+.final .actions{justify-content:center;margin:0}
+footer.site{padding:40px 0;font-size:14px;color:var(--soft)}
+footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+@media (max-width:600px){section{padding:72px 0}body{font-size:16px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Артём Ершов<small>практикующий психолог</small></a>
+    <nav id="nav" aria-label="Разделы">
+      <ul>
+        <li><a href="#when">Когда прийти</a></li>
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#approach">Как я работаю</a></li>
+        <li><a href="#prices">Услуги и цены</a></li>
+        <li class="js-rev-link"><a href="#reviews">Отзывы</a></li>
+        <li><a href="#faq">Вопросы</a></li>
+      </ul>
+    </nav>
+    <a class="btn btn-main" href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">Записаться</a>
+    <button class="menu-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 9h20M4 19h20"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1>Помогаю бережно разобраться в том, что болит, и найти решение</h1>
+      <p class="who"><b>Артём Ершов</b>, психолог в интегративном подходе. Работаю онлайн со взрослыми с 2015 года: IFS, КПТ, ЭОТ, EMDR.</p>
+      <div class="actions">
+        <a class="btn btn-main" href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">Записаться на консультацию</a>
+        <a class="btn btn-ghost" href="https://t.me/i_am_oum" target="_blank" rel="noopener">Задать вопрос в Telegram</a>
+      </div>
+      <dl class="facts">
+        <div><dt>10 лет</dt><dd>опыт работы с людьми</dd></div>
+        <div><dt>5000+</dt><dd>часов практики</dd></div>
+        <div><dt>Онлайн</dt><dd>из любой точки мира</dd></div>
+      </dl>
+    </div>
+    <div class="portrait">
+      <img src="img/artem-blue.webp" width="1200" height="844" alt="Артём Ершов, психолог" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<div class="voices" aria-label="С чем приходят люди">
+  <div class="voices-track">
+    <div style="display:flex;gap:48px">
+      <a href="#when">Постоянно сомневаюсь в себе и своих решениях</a>
+      <a href="#when">Меня ничего не радует и не интересует</a>
+      <a href="#when">Хочу близости, но отталкиваю людей</a>
+      <a href="#when">Перестала радовать работа</a>
+      <a href="#when">Соглашаюсь, хотя внутри всё протестует</a>
+      <a href="#when">Не могу перестать переживать обо всём</a>
+      <a href="#when">Живу «на автомате», а внутри пустота</a>
+      <a href="#when">Я не помню, когда высыпалась</a>
+      <a href="#when">Не могу пережить развод</a>
+      <a href="#when">Постоянно откладываю важное на потом</a>
+    </div>
+    <div style="display:flex;gap:48px" aria-hidden="true">
+      <a href="#when" tabindex="-1">Постоянно сомневаюсь в себе и своих решениях</a>
+      <a href="#when" tabindex="-1">Меня ничего не радует и не интересует</a>
+      <a href="#when" tabindex="-1">Хочу близости, но отталкиваю людей</a>
+      <a href="#when" tabindex="-1">Перестала радовать работа</a>
+      <a href="#when" tabindex="-1">Соглашаюсь, хотя внутри всё протестует</a>
+      <a href="#when" tabindex="-1">Не могу перестать переживать обо всём</a>
+      <a href="#when" tabindex="-1">Живу «на автомате», а внутри пустота</a>
+      <a href="#when" tabindex="-1">Я не помню, когда высыпалась</a>
+      <a href="#when" tabindex="-1">Не могу пережить развод</a>
+      <a href="#when" tabindex="-1">Постоянно откладываю важное на потом</a>
+    </div>
+  </div>
+</div>
+
+<section id="when">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Когда стоит обратиться к психологу</h2>
+      <p class="lead">Бывает, что внутри что-то идёт не так, но словами это не сформулировать: постоянное напряжение, усталость, тревога, сложности в отношениях, ощущение тупика или потери опоры. Если вы узнаёте себя в этих состояниях, с этим уже можно работать.</p>
+    </div>
+    <div class="topics">
+      <div class="topic"><img src="img/i-selfesteem.webp" alt="" loading="lazy"><h3>Самооценка</h3><ul><li>Постоянно сомневаюсь в себе</li><li>Часто чувствую себя не в своей тарелке</li><li>Как говорить «нет» и отстаивать границы</li></ul></div>
+      <div class="topic"><img src="img/i-emotions.webp" alt="" loading="lazy"><h3>Эмоции</h3><ul><li>Меня ничего не радует</li><li>Не могу перестать переживать обо всём</li><li>Постоянная усталость, будто не отдыхаю</li></ul></div>
+      <div class="topic"><img src="img/i-soma.webp" alt="" loading="lazy"><h3>Психосоматика</h3><ul><li>Постоянно снятся кошмары</li><li>Не помню, когда высыпалась</li><li>Напряжение, будто вот-вот случится плохое</li></ul></div>
+      <div class="topic"><img src="img/i-relations.webp" alt="" loading="lazy"><h3>Отношения</h3><ul><li>Одиночество даже рядом с человеком</li><li>Боюсь быть собой, чтобы не потерять близкого</li><li>Боюсь подпустить к себе другого</li></ul></div>
+      <div class="topic"><img src="img/i-career.webp" alt="" loading="lazy"><h3>Карьера и деньги</h3><ul><li>Перестала радовать работа, выгорание</li><li>Не понимаю, куда двигаться дальше</li><li>Откладываю важное на потом</li></ul></div>
+      <div class="topic"><img src="img/i-children.webp" alt="" loading="lazy"><h3>Семья и близкие</h3><ul><li>Близкие не воспринимают меня всерьёз</li><li>Не получается говорить без конфликтов</li><li>Мысли о будущем вгоняют в ужас</li></ul></div>
+      <div class="topic"><img src="img/i-loss.webp" alt="" loading="lazy"><h3>Утрата</h3><ul><li>Как жить после смерти близкого</li><li>Не могу пережить развод и расставание</li><li>Внутри пустота и боль</li></ul></div>
+      <div class="topic"><img src="img/i-borders.webp" alt="" loading="lazy"><h3>Насилие и границы</h3><ul><li>Я не могу это забыть</li><li>Как противостоять бытовому насилию</li><li>Соглашаюсь, хотя внутри всё протестует</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="wrap">
+    <h2>С чем я работаю</h2>
+    <div class="tabs" role="tablist" aria-label="Темы">
+      <button role="tab" aria-selected="true" aria-controls="p1" id="t1">Самооценка</button>
+      <button role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">Эмоциональное состояние</button>
+      <button role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">Отношения</button>
+      <button role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1">Карьера и реализация</button>
+      <button role="tab" aria-selected="false" aria-controls="p5" id="t5" tabindex="-1">Внутренние кризисы</button>
+    </div>
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1"><ul>
+      <li>Постоянно сравниваешь себя с другими, и почти всегда не в свою пользу</li>
+      <li>Есть ощущение «со мной что-то не так», даже при внешних достижениях</li>
+      <li>Обесцениваешь свои результаты и быстро забываешь успехи</li>
+      <li>Живёшь с внутренним критиком, который не даёт расслабиться</li>
+      <li>Чувство, что ты «недостаточно хороший, умный, сильный»</li>
+      <li>Трудно доверять себе и своим решениям</li>
+      <li>Зависишь от одобрения и боишься разочаровать людей</li>
+      <li>Чувство стыда и постоянный самоконтроль</li>
+    </ul></div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden><ul>
+      <li>Тревога, напряжение, ожидание «чего-то плохого»</li>
+      <li>Усталость, апатия, нет энергии даже после отдыха</li>
+      <li>Подавленные эмоции, которые накапливаются и прорываются</li>
+      <li>Постоянное напряжение и жизнь «через надо»</li>
+      <li>Эмоциональное выгорание и ощущение пустоты</li>
+      <li>Раздражительность, вспышки гнева или слёз без явной причины</li>
+      <li>Внутренний хаос, перегруженность мыслями</li>
+      <li>Потеря контакта с собой и своими настоящими чувствами</li>
+    </ul></div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden><ul>
+      <li>Созависимость и страх потерять близкого</li>
+      <li>Повторяющиеся конфликты и одни и те же сценарии</li>
+      <li>Страх близости или, наоборот, страх одиночества</li>
+      <li>Трудно говорить о своих потребностях и чувствах</li>
+      <li>Постоянное подстраивание под партнёра</li>
+      <li>Сложно говорить «нет» и отстаивать свои границы</li>
+      <li>Обида, недосказанность, эмоциональная дистанция</li>
+      <li>Абьюз, ревность, недоверие, контроль</li>
+      <li>Чувство, что тебя не слышат и не понимают</li>
+      <li>Сложности после расставаний и разводов</li>
+      <li>Потеря себя в отношениях</li>
+    </ul></div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden><ul>
+      <li>Выгорание и потеря смысла в работе</li>
+      <li>Страх изменений и шагов в новую сторону</li>
+      <li>Прокрастинация и откладывание важных решений</li>
+      <li>Сомнения в своей ценности как специалиста, даже при опыте и результатах</li>
+      <li>Конфликты с руководством или коллегами</li>
+      <li>Трудно зарабатывать больше без внутреннего сопротивления</li>
+      <li>Страх проявляться, быть видимым, заявлять о себе</li>
+      <li>Нет ясного вектора и чувства «я на своём месте»</li>
+      <li>Разрыв между внутренним потенциалом и реальной реализацией</li>
+    </ul></div>
+    <div class="panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden><ul>
+      <li>Панические атаки</li><li>Тревожное расстройство</li><li>Фобии</li><li>Депрессия</li>
+      <li>Эмоциональное выгорание</li><li>Обсессивно-компульсивное расстройство (ОКР)</li><li>Навязчивые мысли</li>
+      <li>Самоповреждение (селфхарм)</li><li>Зависимости</li><li>Психосоматика</li><li>Нарушения сна</li>
+      <li>Посттравматическое расстройство (ПТСР)</li><li>Экзистенциальный кризис</li>
+    </ul></div>
+    <p class="note">Я работаю со взрослыми. Если ваш запрос лучше решать с другим специалистом, честно скажу об этом и подскажу, к кому обратиться.</p>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo"><img src="img/artem-red.webp" width="1000" height="671" alt="Артём Ершов" loading="lazy"></div>
+    <div class="about-text">
+      <h2>Обо мне</h2>
+      <p class="big">Меня зовут Артём Ершов. Я практикующий психолог, работаю в интегративном подходе. С 2015 года помогаю людям справляться с трудностями в отношениях с собой, с другими и с миром.</p>
+      <p>Моя профессиональная позиция опирается на теплоту и эмпатию. В работе я выстраиваю отношения, основанные на безопасности, принятии, сочувствии, уважении и бережности, а ещё на ответственности и смелости встречаться с трудностями и болью и в полной мере проживать свою жизнь.</p>
+      <p>Я создаю условия, в которых вы можете свободно выражать чувства, понять себя и ситуацию и найти решение. Я использую проверенные подходы, поэтому результат получается устойчивым и приходит в короткие сроки.</p>
+      <ul class="methods" aria-label="Методы">
+        <li>IFS — работа с внутренними частями</li><li>КПТ</li><li>ЭОТ — эмоционально-образная терапия</li><li>EMDR</li>
+      </ul>
+      <div class="qualities">
+        <div class="quality"><img src="img/i-listen.webp" alt="" loading="lazy"><div><h3>Слышу и понимаю</h3><p>Внимательно отношусь к переживаниям и помогаю прояснить сложное состояние, не обесценивая чувства и опыт.</p></div></div>
+        <div class="quality"><img src="img/i-individual.webp" alt="" loading="lazy"><div><h3>Без шаблонов</h3><p>Каждую ситуацию рассматриваю с учётом личности, жизненного контекста и того этапа, на котором вы сейчас.</p></div></div>
+        <div class="quality"><img src="img/i-depth.webp" alt="" loading="lazy"><div><h3>Работаю с причинами</h3><p>Работа направлена не только на облегчение состояния, но и на понимание глубинных причин происходящего.</p></div></div>
+      </div>
+      <ul class="proof">
+        <li>Более 10 лет практики в психологии</li>
+        <li>5000+ часов индивидуальной работы и сопровождения</li>
+        <li>Регулярно повышаю квалификацию и углубляю практику</li>
+        <li>Прохожу личную терапию и регулярные супервизии</li>
+      </ul>
+      <div class="docs">
+        <button type="button" data-full="img/diploma.webp" data-alt="Диплом о профессиональной переподготовке, Международная академия интегративной психологии"><img src="img/diploma.webp" alt="" loading="lazy"><span>Диплом о переподготовке «Практическая психология», 270 часов, МАИП, 2026</span></button>
+        <button type="button" data-full="img/certificate.webp" data-alt="Сертификат «Психолог в интегративном подходе 4.0»"><img src="img/certificate.webp" alt="" loading="lazy"><span>Сертификат «Психолог в интегративном подходе 4.0», 2025</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why">
+  <div class="wrap">
+    <h2>Почему со мной работать спокойно</h2>
+    <div class="why-list">
+      <div class="why-item"><h3>Здесь можно выдохнуть</h3><p>Можно говорить всё, что думаете и чувствуете, без страха показаться слабым, глупым или неправильным.</p></div>
+      <div class="why-item"><h3>Ваш темп, ваши правила</h3><p>Моя задача — создать условия, в которых изменения произойдут безопасно и в комфортном для вас ритме.</p></div>
+      <div class="why-item"><h3>Причины, а не симптомы</h3><p>Разберёмся, почему вам плохо, откуда это идёт и что запускает это снова и снова.</p></div>
+      <div class="why-item"><h3>Помощь работает и после сессии</h3><p>То, с чем мы работаем, сразу влияет на жизнь: как вы общаетесь с близкими, реагируете на стресс, принимаете решения.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="wrap">
+    <h2>Мой подход</h2>
+    <dl class="principles">
+      <div><dt>Реальность важнее интерпретаций</dt><dd>Я опираюсь на то, что есть здесь и сейчас, а не на теории ради теорий.</dd></div>
+      <div><dt>Фокус на актуальном</dt><dd>Работа строится вокруг того, что важно сейчас, а не вокруг абстрактных тем.</dd></div>
+      <div><dt>В рамках запроса</dt><dd>Я не увожу процесс «в глубину ради глубины» и не расширяю его без необходимости.</dd></div>
+      <div><dt>Без давления</dt><dd>Изменения не форсируются: они происходят, когда человек к ним готов.</dd></div>
+      <div><dt>Человек целиком</dt><dd>Я смотрю на связь переживаний, мыслей, телесных реакций и жизненного контекста. Важно не отдельное событие, а то, как человек с ним живёт.</dd></div>
+      <div><dt>Присутствие и внимание</dt><dd>Важны не техники сами по себе, а качество контакта и внимание к процессу.</dd></div>
+      <div><dt>Профессиональные границы</dt><dd>Я не даю советов «как жить» и не принимаю решения за клиента.</dd></div>
+      <div><dt>Темп и формат</dt><dd>Работаю онлайн, темп подбирается индивидуально. Так легче сохранять регулярность и спокойный ритм.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <h2>Как проходит работа</h2>
+    <ol>
+      <li><div><h3>Знакомство и диагностика</h3><p>Мы начинаем с диагностической встречи. Вы рассказываете о своей ситуации и чувствуете, комфортно ли вам со мной. Я задаю уточняющие вопросы, помогаю прояснить суть запроса, даже если сейчас он кажется размытым или запутанным, и предлагаю путь решения.</p></div></li>
+      <li><div><h3>Договорённости</h3><p>Если предложенный путь вам откликается, фиксируем формат: условия, длительность, стоимость. Сотрудничество оформляем официально, через договор, чтобы у вас было ясное понимание процесса, сроков и безопасности.</p></div></li>
+      <li><div><h3>Терапевтическая работа</h3><p>Шаг за шагом исследуем, что стоит за вашей ситуацией: эмоции, внутренние конфликты, прошлый опыт, убеждения и потребности. Выходя на причины, мягко прорабатываем их, снимаем внутреннее напряжение и запускаем реальные изменения.</p></div></li>
+      <li><div><h3>Отслеживаем прогресс</h3><p>С помощью профессиональных инструментов и тестов отслеживаем динамику и при необходимости корректируем направление. Каждую сессию я завершаю так, чтобы вы выходили из неё в более устойчивом состоянии, с ощущением опоры и ясности.</p></div></li>
+      <li><div><h3>Задания между сессиями</h3><p>По желанию даю индивидуальные задания для самостоятельной работы. Они не обязательны, но по опыту те, кто в них включается, получают результат быстрее и глубже.</p></div></li>
+    </ol>
+    <a class="btn btn-main" href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">Записаться на диагностику</a>
+  </div>
+</section>
+
+<section id="prices">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Услуги и цены</h2>
+      <p class="lead">Все встречи проходят онлайн по видеосвязи. Если важно разобраться в ситуации и получить ясность, подойдёт первая консультация. Если вы готовы к последовательным изменениям, лучше подойдёт пакет сессий.</p>
+    </div>
+    <div class="offers">
+      <div class="offer first">
+        <h3>Первая консультация</h3>
+        <div class="meta">60 минут, онлайн</div>
+        <div class="price">2 500 ₽<s>5 000 ₽</s></div>
+        <div class="meta">скидка 50% на знакомство</div>
+        <p>Я полностью вникну в вашу ситуацию, помогу понять причины и построю понятный пошаговый путь решения. Заодно вы почувствуете, подходит ли вам мой стиль работы.</p>
+        <a class="btn" href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      <div class="offer">
+        <h3>Консультация</h3>
+        <div class="meta">60 минут, онлайн</div>
+        <div class="price">5 000 ₽</div>
+        <p>Работа с конкретным запросом: проясняем его, выходим на причины и мягко прорабатываем их, снижая внутреннее напряжение. Даже одна сессия помогает вернуть ясность и опору.</p>
+        <a class="btn btn-ghost" href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">Записаться</a>
+      </div>
+      <div class="offer">
+        <h3>Шеринг в группе</h3>
+        <div class="meta">1 час, онлайн, до 10 участников</div>
+        <div class="price">3 000 ₽</div>
+        <p>Учимся замечать, называть и бережно выражать свои чувства. В безопасном пространстве группы можно разделить переживания, снизить стресс и лучше почувствовать связь тела и эмоций.</p>
+        <a class="btn btn-ghost" href="https://t.me/i_am_oum" target="_blank" rel="noopener">Узнать дату</a>
+      </div>
+    </div>
+    <div class="packages">
+      <div class="packages-head">
+        <h3>Пакеты сессий</h3>
+        <p>Для тех, кто хочет глубже проработать запрос и закрепить изменения. Работа идёт последовательно, с вниманием к динамике и прогрессу. Онлайн, 60 минут каждая встреча.</p>
+      </div>
+      <div class="pack-grid">
+        <div class="pack"><b>4 сессии</b><div class="sum">19 000 ₽</div><small>4 750 ₽ за встречу<br>действует 2 месяца</small><span class="save">выгода 1 000 ₽</span></div>
+        <div class="pack"><b>8 сессий</b><div class="sum">36 000 ₽</div><small>4 500 ₽ за встречу<br>действует 3 месяца</small><span class="save">выгода 4 000 ₽</span></div>
+        <div class="pack"><b>12 сессий</b><div class="sum">51 000 ₽</div><small>4 250 ₽ за встречу<br>действует 5 месяцев</small><span class="save">выгода 9 000 ₽</span></div>
+        <div class="pack"><b>24 сессии</b><div class="sum">96 000 ₽</div><small>4 000 ₽ за встречу<br>действует 8 месяцев</small><span class="save">выгода 24 000 ₽</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews" hidden>
+  <div class="wrap">
+    <h2>Отзывы моих клиентов</h2>
+    <p class="lead">Истории публикуются без имён и с согласия авторов.</p>
+    <div class="rev-track" id="rev-track"></div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap faq-grid">
+    <div>
+      <h2>Частые вопросы</h2>
+      <p class="lead" style="margin-top:20px">Не нашли ответа? Напишите мне, отвечу лично.</p>
+      <a class="btn btn-ghost" href="https://t.me/i_am_oum" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <div>
+      <details><summary>Нужно ли готовиться к консультации?</summary><div class="ans"><p>Специальной подготовки не нужно. Достаточно прийти с тем, что сейчас волнует. Даже если сложно сформулировать проблему словами, мы спокойно разберёмся в процессе.</p><p>Для онлайн-сессии проверьте, что интернет стабильный, и что работает один из сервисов видеосвязи: Zoom, Телемост, WhatsApp, VK, Viber.</p></div></details>
+      <details><summary>Сколько сессий нужно для результата?</summary><div class="ans"><p>Всё зависит от запроса. Но уже после первой консультации клиенты отмечают:</p><ul><li>состояние меняется с минуса на плюс;</li><li>уходит душевная и физическая боль;</li><li>появляется понимание своих настоящих желаний и энергия для них;</li><li>возвращается ощущение внутренней опоры;</li><li>уходит состояние борьбы и страдания;</li><li>возвращается способность чувствовать радость и любовь.</li></ul><p>Иногда достаточно 1–3 встреч, чтобы снять острое напряжение и увидеть ясность. Для глубоких и устойчивых изменений обычно нужно более длительное сопровождение.</p></div></details>
+      <details><summary>Можно прийти с любым запросом?</summary><div class="ans"><p>Я работаю только со взрослыми и с теми запросами, где могу обеспечить безопасную и качественную помощь. Я не работаю с детьми, подростками и с тяжёлыми психотическими расстройствами. Если ваш запрос относится к этим областям, подскажу, к какому специалисту обратиться.</p></div></details>
+      <details><summary>Онлайн или очно?</summary><div class="ans"><p>Я работаю онлайн. Это удобно и конфиденциально: вы у себя дома или в другом месте, где можно уединиться, и при этом мы создаём общее пространство.</p></div></details>
+      <details><summary>Работает ли онлайн так же, как вживую?</summary><div class="ans"><p>Да. Эффективность онлайн-работы сопоставима с очными встречами и позволяет глубоко прорабатывать запрос, где бы вы ни находились.</p></div></details>
+      <details><summary>Как записаться и оплатить?</summary><div class="ans"><p>Выберите время в <a href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">онлайн-записи</a> или напишите мне в <a href="https://t.me/i_am_oum" target="_blank" rel="noopener">Telegram</a>. Время бронируется после оплаты, реквизиты я пришлю лично. Если планы изменились, предупредите не позже чем за 24 часа до встречи. За пару минут до начала придёт ссылка на видеозвонок.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Начнём с одной встречи</h2>
+    <p>Расскажете, что происходит, а я помогу понять причины и предложу путь решения. Первая консультация — со скидкой 50%.</p>
+    <div class="actions">
+      <a class="btn btn-main" href="https://n1939514.yclients.com/company/1708991/personal/select-services" target="_blank" rel="noopener">Записаться на консультацию</a>
+      <a class="btn btn-ghost" href="https://t.me/i_am_oum" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>© Артём Ершов, практикующий психолог</span>
+    <span><a href="https://t.me/i_am_oum" target="_blank" rel="noopener">Telegram</a> &nbsp; <a href="https://t.me/iamoum" target="_blank" rel="noopener">Канал «Душевная терапия»</a></span>
+  </div>
+</footer>
+
+<dialog id="viewer"><button type="button" aria-label="Закрыть">×</button><img alt=""></dialog>
+
+<script src="reviews.js"></script>
+<script>
+// меню на телефоне
+const mb=document.querySelector('.menu-btn'), nav=document.getElementById('nav');
+mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
+
+// вкладки «С чем я работаю»
+const tabs=[...document.querySelectorAll('[role=tab]')];
+function sel(t){tabs.forEach(x=>{const on=x===t;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on});t.focus()}
+tabs.forEach((t,i)=>{t.addEventListener('click',()=>sel(t));t.addEventListener('keydown',e=>{if(e.key==='ArrowRight')sel(tabs[(i+1)%tabs.length]);if(e.key==='ArrowLeft')sel(tabs[(i-1+tabs.length)%tabs.length])})});
+
+// просмотр дипломов
+const dlg=document.getElementById('viewer');
+document.querySelectorAll('.docs button').forEach(b=>b.addEventListener('click',()=>{const im=dlg.querySelector('img');im.src=b.dataset.full;im.alt=b.dataset.alt;dlg.showModal()}));
+dlg.querySelector('button').addEventListener('click',()=>dlg.close());
+dlg.addEventListener('click',e=>{if(e.target===dlg)dlg.close()});
+
+// отзывы: раздел показывается, только когда в reviews.js есть тексты
+const R=window.REVIEWS||[], track=document.getElementById('rev-track');
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+if(R.length){
+  track.innerHTML=R.map(r=>`<article class="rev">${r.title?`<blockquote>«${esc(r.title)}»</blockquote>`:''}<div class="ba">${r.before?`<div><h4>Было</h4><p>${esc(r.before)}</p></div>`:''}${r.after?`<div><h4>Стало</h4><p>${esc(r.after)}</p></div>`:''}${r.text?`<p>${esc(r.text)}</p>`:''}</div>${r.who?`<footer>${esc(r.who)}</footer>`:''}</article>`).join('');
+  document.getElementById('reviews').hidden=false;
+} else {
+  document.querySelector('.js-rev-link').remove();
+}
+</script>
+<script src="//code.jivo.ru/widget/D53enr8jIU" async></script>
+</body>
+</html>
