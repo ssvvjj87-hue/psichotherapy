@@ -68,8 +68,8 @@ nav a:hover{color:var(--teal-dark)}
 
 /* первый экран */
 .hero{padding:56px 0 0;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
-.hero h1{font-size:clamp(40px,5.6vw,72px);margin-bottom:24px}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.hero h1{font-size:clamp(38px,4.6vw,62px);margin-bottom:24px;max-width:15ch}
 .hero .who{font-size:18px;color:var(--soft);margin-bottom:32px;max-width:46ch}
 .hero .who b{color:var(--deep);font-weight:500}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
@@ -78,11 +78,11 @@ nav a:hover{color:var(--teal-dark)}
 .facts dt{font-family:var(--serif);font-size:38px;line-height:1;color:var(--teal-dark)}
 .facts dd{margin:6px 0 0;font-size:15px;color:var(--soft)}
 .portrait{position:relative;align-self:end}
-.portrait::before{content:"";position:absolute;left:8%;right:2%;bottom:0;top:12%;background:var(--sand);border-radius:999px 999px 0 0}
+.portrait::before{content:"";position:absolute;left:-6%;right:-6%;bottom:0;top:18%;background:var(--sand);border-radius:999px 999px 0 0}
 .portrait img{position:relative;width:100%;height:auto}
 @media (max-width:860px){
   .hero-grid{grid-template-columns:1fr}
-  .portrait{max-width:440px;margin:0 auto}
+  .portrait{max-width:360px;margin:0 auto}
   .facts{margin-bottom:24px}
 }
 
@@ -127,7 +127,7 @@ nav a:hover{color:var(--teal-dark)}
 
 /* обо мне */
 .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:start}
-.about-photo{position:sticky;top:100px;background:var(--sand);border-radius:28px 28px 200px 28px;overflow:hidden;padding-top:24px}
+.about-photo{position:sticky;top:100px;background:var(--sand);border-radius:240px 240px 28px 28px;overflow:hidden;padding:40px 24px 0}
 .about-text h2{margin-bottom:28px}
 .about-text .big{font-family:var(--serif);font-size:24px;line-height:1.45;margin-bottom:24px}
 .about-text p{max-width:64ch}
@@ -277,7 +277,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       </dl>
     </div>
     <div class="portrait">
-      <img src="img/artem-blue.webp" width="1200" height="844" alt="Артём Ершов, психолог" fetchpriority="high">
+      <img src="img/artem-blue.webp" width="900" height="996" alt="Артём Ершов, психолог" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -396,7 +396,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 
 <section id="about">
   <div class="wrap about-grid">
-    <div class="about-photo"><img src="img/artem-red.webp" width="1000" height="671" alt="Артём Ершов" loading="lazy"></div>
+    <div class="about-photo"><img src="img/artem-red.webp" width="600" height="798" alt="Артём Ершов" loading="lazy"></div>
     <div class="about-text">
       <h2>Обо мне</h2>
       <p class="big">Меня зовут Артём Ершов. Я практикующий психолог, работаю в интегративном подходе. С 2015 года помогаю людям справляться с трудностями в отношениях с собой, с другими и с миром.</p>
