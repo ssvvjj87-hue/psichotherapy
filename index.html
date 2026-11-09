@@ -68,8 +68,8 @@ nav a:hover{color:var(--teal-dark)}
 
 /* первый экран */
 .hero{padding:56px 0 0;overflow:hidden}
-.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
-.hero h1{font-size:clamp(38px,4.6vw,62px);margin-bottom:24px;max-width:15ch}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(36px,4.2vw,56px);margin-bottom:24px;max-width:20ch}
 .hero .who{font-size:18px;color:var(--soft);margin-bottom:32px;max-width:46ch}
 .hero .who b{color:var(--deep);font-weight:500}
 .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
@@ -77,7 +77,7 @@ nav a:hover{color:var(--teal-dark)}
 .facts div{min-width:120px}
 .facts dt{font-family:var(--serif);font-size:38px;line-height:1;color:var(--teal-dark)}
 .facts dd{margin:6px 0 0;font-size:15px;color:var(--soft)}
-.portrait{position:relative;align-self:end}
+.portrait{position:relative;align-self:end;margin-bottom:0}
 .portrait::before{content:"";position:absolute;left:-6%;right:-6%;bottom:0;top:18%;background:var(--sand);border-radius:999px 999px 0 0}
 .portrait img{position:relative;width:100%;height:auto}
 @media (max-width:860px){
@@ -277,7 +277,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
       </dl>
     </div>
     <div class="portrait">
-      <img src="img/artem-blue.webp" width="900" height="996" alt="Артём Ершов, психолог" fetchpriority="high">
+      <img src="img/artem-blue.webp?v=2" width="900" height="996" alt="Артём Ершов, психолог" fetchpriority="high">
     </div>
   </div>
 </section>
@@ -396,7 +396,7 @@ footer.site .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:
 
 <section id="about">
   <div class="wrap about-grid">
-    <div class="about-photo"><img src="img/artem-red.webp" width="600" height="798" alt="Артём Ершов" loading="lazy"></div>
+    <div class="about-photo"><img src="img/artem-red.webp?v=2" width="600" height="798" alt="Артём Ершов" loading="lazy"></div>
     <div class="about-text">
       <h2>Обо мне</h2>
       <p class="big">Меня зовут Артём Ершов. Я практикующий психолог, работаю в интегративном подходе. С 2015 года помогаю людям справляться с трудностями в отношениях с собой, с другими и с миром.</p>
