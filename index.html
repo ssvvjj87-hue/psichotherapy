@@ -18,9 +18,9 @@
   --bg:#F7F5F2; --card:#FFFFFF; --ink:#1E2B2F; --soft:#5B6B6F;
   --teal:#1A97AF; --teal-dark:#137B8F; --tint:#E7F3F5; --line:#E4E0DA;
   --fs-h1:48px; --fs-h2:36px; --fs-h3:20px; --fs-body:17px; --fs-small:15px;
-  --gap:96px; --radius:20px;
+  --gap:72px; --radius:20px;
 }
-@media (max-width:760px){ :root{ --fs-h1:32px; --fs-h2:27px; --fs-h3:19px; --fs-body:16px; --fs-small:14px; --gap:64px; } }
+@media (max-width:760px){ :root{ --fs-h1:32px; --fs-h2:27px; --fs-h3:19px; --fs-body:16px; --fs-small:14px; --gap:48px; } }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--fs-body)/1.6 "Manrope",system-ui,sans-serif}
@@ -35,7 +35,7 @@ p{margin:0 0 1em}
 .small{font-size:var(--fs-small);color:var(--soft)}
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 section{padding:var(--gap) 0;scroll-margin-top:64px}
-.lead{color:var(--soft);max-width:640px;margin-bottom:40px}
+.lead{color:var(--soft);max-width:640px;margin-bottom:32px}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font:600 var(--fs-small)/1 "Manrope",sans-serif;text-decoration:none;border:2px solid var(--teal);transition:background .2s,color .2s;cursor:pointer}
 .btn-main{background:var(--teal);color:#fff}
 .btn-main:hover{background:var(--teal-dark);border-color:var(--teal-dark)}
@@ -64,23 +64,40 @@ nav a:hover{color:var(--teal-dark)}
 }
 
 /* первый экран */
-.hero{padding:64px 0 var(--gap)}
+.hero{padding:40px 0 32px}
 .hero-grid{display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center}
 .hero h1{margin-bottom:20px}
 .hero .sub{color:var(--soft);margin-bottom:32px;max-width:520px}
 .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:40px;margin:40px 0 0;padding:0}
 .facts dt{font-size:28px;font-weight:700;color:var(--teal-dark);line-height:1}
 .facts dd{margin:8px 0 0;font-size:var(--fs-small);color:var(--soft)}
-.photo{border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#E9F4F6 0%,#D6ECF0 100%);aspect-ratio:9/10}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:center bottom}
+.photo{position:relative;padding-top:24px}
+.photo::before{content:"";position:absolute;left:6%;right:6%;top:14%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#E3F2F5 0%,#D3EBF0 70%)}
+.photo img{position:relative;width:100%;height:auto;-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}
 @media (max-width:900px){
   .hero{padding-top:40px}
   .hero-grid{grid-template-columns:1fr;gap:32px}
-  .hero .photo{max-width:420px;width:100%}
+  .hero .photo{max-width:360px;width:100%;margin:0 auto}
   .facts{gap:20px}
   .facts dt{font-size:22px}
 }
 
+
+/* «Узнаёте себя?» — две строки навстречу друг другу, медленно; нажатие ведёт на запись */
+.pains{padding:24px 0 var(--gap);overflow:hidden}
+.pains .head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:20px}
+.pains h2{margin:0}
+.row{display:flex;width:max-content;gap:12px;margin-bottom:12px;animation:left 90s linear infinite}
+.row.back{animation-name:right}
+.pains:hover .row,.row:focus-within{animation-play-state:paused}
+.pain{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:8px 22px 8px 8px;text-decoration:none;color:var(--ink);white-space:nowrap;transition:border-color .2s,background .2s}
+.pain:hover{border-color:var(--teal);background:var(--tint)}
+.pain img{width:40px;height:40px;object-fit:contain;border-radius:50%;background:#fff;padding:4px;flex:none}
+.pain small{display:block;font-size:12px;font-weight:600;color:var(--teal-dark);line-height:1.2}
+.pain span{display:block;font-size:var(--fs-small);font-weight:500;line-height:1.3}
+@keyframes left{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes right{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+@media (prefers-reduced-motion:reduce){.row{animation:none;flex-wrap:wrap;width:auto;padding:0 20px}.row [aria-hidden]{display:none}}
 /* с чем помогаю */
 .help{background:var(--card)}
 .tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:32px}
@@ -95,8 +112,8 @@ nav a:hover{color:var(--teal-dark)}
 
 /* обо мне */
 .about-grid{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start}
-.about .photo{aspect-ratio:3/4;background:linear-gradient(180deg,#F1E9DE 0%,#E6DACA 100%);padding-top:28px}
-.about .photo img{object-fit:contain}
+.about .photo::before{background:radial-gradient(circle at 50% 40%,#F2EADF 0%,#E8DCCB 70%);left:4%;right:4%;top:10%}
+.about .photo img{max-width:340px;margin:0 auto}
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:8px 0 32px;padding:0}
 .chips li{background:var(--tint);color:var(--teal-dark);font-size:var(--fs-small);font-weight:600;padding:8px 16px;border-radius:999px}
 .checks{list-style:none;margin:0 0 32px;padding:0}
@@ -106,7 +123,7 @@ nav a:hover{color:var(--teal-dark)}
 .docs button{padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);cursor:zoom-in;text-align:left;font:inherit;color:inherit}
 .docs img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .docs span{display:block;padding:12px 14px;font-size:var(--fs-small);color:var(--soft)}
-@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:32px}.about .photo{max-width:380px}}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:24px}.about .photo{max-width:340px;margin:0 auto}}
 @media (max-width:480px){.docs{grid-template-columns:1fr}}
 dialog{border:0;padding:0;border-radius:12px;max-width:94vw;background:#fff}
 dialog::backdrop{background:rgba(30,43,47,.75)}
@@ -219,6 +236,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
     </div>
     <div class="photo"><img src="img/artem-blue.webp?v=3" width="900" height="996" alt="Психолог Артём Ершов" fetchpriority="high"></div>
   </div>
+</section>
+
+
+<section class="pains" aria-labelledby="pains-h">
+  <div class="wrap head">
+    <h2 id="pains-h">Узнаёте себя?</h2>
+    <p class="small" style="margin:0">Нажмите на то, что откликается, — и запишитесь на консультацию</p>
+  </div>
+  <div class="row" id="row1"></div>
+  <div class="row back" id="row2"></div>
 </section>
 
 <section class="help" id="help">
@@ -411,6 +438,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
 
 <script src="reviews.js?v=3"></script>
 <script>
+
+// бегущие строки: боли клиентов (тексты со старого сайта на Тильде), каждая — ссылка на запись в боте
+const BOT='https://t.me/oumShiva108_bot?start=sajt_bol';
+const P1=[['selfesteem','Самооценка','Постоянно сомневаюсь в себе и своих решениях'],['emotions','Эмоции','Меня ничего не радует и не интересует'],['soma','Психосоматика','Постоянно снятся кошмары'],['relations','Отношения','Одиночество даже рядом с человеком'],['career','Работа','Перестала радовать работа, чувствую выгорание'],['loss','Утрата','Не могу пережить развод и расставание'],['borders','Границы','Соглашаюсь, хотя внутри всё протестует'],['children','Семья','Близкие не воспринимают меня всерьёз']];
+const P2=[['selfesteem','Самооценка','Чувствую, что недостаточно хорош(а), даже когда стараюсь'],['emotions','Эмоции','Не могу перестать переживать обо всём'],['soma','Психосоматика','Не помню, когда нормально высыпалась'],['relations','Отношения','Хочу близости, но отталкиваю людей'],['career','Работа','Постоянно откладываю важное на потом'],['loss','Утрата','Живу «на автомате», а внутри пустота'],['borders','Границы','Не могу сказать «нет» и отстоять себя'],['emotions','Эмоции','Постоянная усталость, будто не отдыхаю']];
+function fill(id,list){const one=(hide)=>list.map(([i,c,t])=>`<a class="pain" href="${BOT}" target="_blank" rel="noopener"${hide?' tabindex="-1"':''}><img src="img/i-${i}.webp" alt="" loading="lazy"><div><small>${c}</small><span>${t}</span></div></a>`).join('');
+  document.getElementById(id).innerHTML=`<div style="display:flex;gap:12px">${one(false)}</div><div style="display:flex;gap:12px" aria-hidden="true">${one(true)}</div>`;}
+fill('row1',P1);fill('row2',P2);
 const mb=document.querySelector('.menu-btn'),nav=document.getElementById('nav');
 mb.addEventListener('click',()=>{const o=nav.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
 nav.addEventListener('click',e=>{if(e.target.tagName==='A'){nav.classList.remove('open');mb.setAttribute('aria-expanded',false)}});
