@@ -82,7 +82,7 @@ header{background:var(--cream);position:sticky;top:0;z-index:50}
 .hero .acts{position:relative;display:flex;gap:12px;margin-top:28px}
 .hero .acts .btn-or{min-width:287px}
 .hero .acts .btn-line{min-width:156px}
-.stats{position:absolute;left:0;top:460px;width:661px;height:130px;background:var(--cream);border-radius:10px;box-shadow:2px 5px 10px rgba(165,161,161,.56);display:grid;grid-template-columns:182px 176px 1fr;align-items:start;padding-top:26px}
+.stats{position:absolute;z-index:2;left:0;top:460px;width:661px;height:130px;background:var(--cream);border-radius:10px;box-shadow:2px 5px 10px rgba(165,161,161,.56);display:grid;grid-template-columns:182px 176px 1fr;align-items:start;padding-top:26px}
 .stat{display:flex;gap:12px;padding:0 0 0 13px;border-right:2px solid #F3EDE9;height:78px}
 .stat:last-child{border:0}
 .stat img{width:36px;height:32px;object-fit:contain;flex:none}
@@ -94,7 +94,7 @@ header{background:var(--cream);position:sticky;top:0;z-index:50}
   .hero h1{font-size:34px;line-height:40px;padding-top:24px}
   .hero-photo{position:relative;left:auto;top:auto;width:100%;max-width:360px;margin:20px auto -10px}
   .hero picture{order:5}
-  .stats{position:relative;top:auto;width:100%;max-width:661px;height:auto;margin-top:28px;padding:18px 0;grid-template-columns:repeat(3,1fr)}
+  .stats{position:relative;z-index:2;top:auto;width:100%;max-width:661px;height:auto;margin-top:28px;padding:18px 0;grid-template-columns:repeat(3,1fr)}
   .stat{height:auto;flex-direction:column;gap:6px}
   .stat b{font-size:22px;line-height:28px}
   .hero .acts{flex-wrap:wrap}
@@ -319,16 +319,16 @@ footer{background:var(--teal2);color:#fff}
 <section class="sec cream hero">
   <div class="wrap">
     <picture><source media="(max-width:1100px)" srcset="img/artem-blue.webp?v=3"><img class="hero-photo" src="img/hero-full.webp" width="1400" height="985" alt="Психолог Артём Ершов" fetchpriority="high"></picture>
-    <h1>Помогу бережно разобраться в вашей ситуации и найти решение</h1>
-    <p class="sub">Артём Ершов, психолог в интегративном подходе. С 2015 года работаю со взрослыми людьми. Специализируюсь на тревоге, самооценке, отношениях, выгорании, фобиях и страхах.</p>
+    <h1>Профессиональная помощь опытного психолога</h1>
+    <p class="sub">Помогу бережно разобраться в вашей ситуации и найти решение. Специализируюсь на проблемах с самооценкой, тревоге, отношениях и фобиях.</p>
     <div class="acts">
       <a class="btn btn-or" href="https://t.me/oumShiva108_bot?start=sajt" target="_blank" rel="noopener">Записаться на консультацию</a>
       <a class="btn btn-line js-contact" href="#contact">Задать вопрос</a>
     </div>
     <div class="stats">
-      <div class="stat"><img src="img/st-10.webp" alt=""><div><b>10 лет</b><span>опыт работы с людьми</span></div></div>
-      <div class="stat"><img src="img/st-clock.webp" alt=""><div><b>5000+</b><span>часов практики</span></div></div>
-      <div class="stat"><img src="img/st-online.webp" alt=""><div><b>Онлайн</b><span>удобный формат работы</span></div></div>
+      <div class="stat"><img src="img/st-10.webp" alt=""><div><b>11 лет</b><span>опыт работы</span></div></div>
+      <div class="stat"><img src="img/st-clock.webp" alt=""><div><b>5000</b><span>часов практики</span></div></div>
+      <div class="stat"><img src="img/st-online.webp" alt=""><div><b>Онлайн</b><span>с любой страны</span></div></div>
     </div>
   </div>
 </section>
@@ -408,28 +408,7 @@ footer{background:var(--teal2);color:#fff}
   </div>
 </section>
 
-<section class="sec sand slant" id="approach">
-  <div class="wrap">
-    <h2>Мой подход</h2>
-    <div class="scheme appr" data-scheme>
-      <svg class="links" aria-hidden="true"></svg>
-      <div class="grid">
-        <div class="step"><h3>Реальность важнее интерпретаций</h3><p>Я опираюсь на то, что есть здесь и сейчас, а не на теории ради теорий.</p></div>
-        <div class="step"><h3>Формат</h3><p>Работаю онлайн. Это даёт возможность сохранять регулярность и спокойный темп работы.</p></div>
-        <div class="step"><h3>Без давления на изменения</h3><p>Изменения не форсируются — они происходят тогда, когда человек к ним готов.</p></div>
-        <div class="step"><h3>Начало работы</h3><p>Мы начинаем с прояснения проблемы и текущей ситуации без давления на «результат».</p></div>
-        <div class="step"><h3>Работаю в рамках запроса</h3><p>Я не увожу процесс в «глубину ради глубины» и не расширяю его без необходимости.</p></div>
-        <div class="step"><h3>Присутствие и внимание</h3><p>В работе важны не техники сами по себе, а качество контакта и наблюдение за процессом.</p></div>
-        <div class="step"><h3>Процесс</h3><p>В работе я смотрю на взаимосвязь переживаний, мыслей, телесных реакций и жизненного контекста. Важно не отдельное событие, а то, как человек с ним живёт.</p></div>
-        <div class="step"><h3>Профессиональные границы</h3><p>Я не даю советов «как жить» и не подменяю собой решения клиента.</p></div>
-        <div class="step"><h3>Темп</h3><p>Темп работы подбирается индивидуально.</p></div>
-        <div class="step"><h3>Фокус</h3><p>Работа строится вокруг того, что актуально сейчас, а не вокруг абстрактных тем и теорий.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec cream slant" id="steps">
+<section class="sec sand slant" id="steps">
   <div class="wrap">
     <h2>Как я работаю: этапы решения вашей проблемы</h2>
     <div class="scheme" data-scheme>
