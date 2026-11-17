@@ -24,7 +24,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--cream);color:var(--ink);font:400 18px/28px "Manrope",Arial,sans-serif;overflow-x:hidden}
-img{display:block;max-width:100%}
+img{display:block;max-width:100%;height:auto}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
 h1,h2,h3,p{margin:0}
@@ -92,7 +92,8 @@ header{background:var(--cream);position:sticky;top:0;z-index:50}
   .hero{height:auto;padding-bottom:0}
   .hero .wrap{display:flex;flex-direction:column}
   .hero h1{font-size:34px;line-height:40px;padding-top:24px}
-  .hero-photo{position:relative;left:auto;top:auto;width:100%;max-width:640px;order:5;margin:20px auto -10px}
+  .hero-photo{position:relative;left:auto;top:auto;width:100%;max-width:360px;margin:20px auto -10px}
+  .hero picture{order:5}
   .stats{position:relative;top:auto;width:100%;max-width:661px;height:auto;margin-top:28px;padding:18px 0;grid-template-columns:repeat(3,1fr)}
   .stat{height:auto;flex-direction:column;gap:6px}
   .stat b{font-size:22px;line-height:28px}
@@ -145,7 +146,7 @@ a.pc-card:hover .pc-arrow svg{stroke:var(--teal);transform:translateX(3px)}
 .tb-arrows{display:none}
 @media (max-width:1100px){
   .tabsblock{min-height:0}
-  .red-photo{position:relative;left:auto;top:auto;width:100%;max-width:520px;margin:0 auto 10px}
+  .red-photo{position:relative;left:auto;top:auto;width:100%;max-width:300px;margin:0 auto 10px}
   .tb{margin-left:0;grid-template-columns:1fr;gap:16px}
   .tb-tabs{flex-direction:row;flex-wrap:wrap;gap:8px}
   .tab{padding:0 14px;font-size:15px}
@@ -315,7 +316,7 @@ footer{background:var(--teal2);color:#fff}
 
 <section class="sec cream hero">
   <div class="wrap">
-    <img class="hero-photo" src="img/hero-full.webp" width="1400" height="985" alt="Психолог Артём Ершов" fetchpriority="high">
+    <picture><source media="(max-width:1100px)" srcset="img/artem-blue.webp?v=3"><img class="hero-photo" src="img/hero-full.webp" width="1400" height="985" alt="Психолог Артём Ершов" fetchpriority="high"></picture>
     <h1>Помогу бережно разобраться в вашей ситуации и найти решение</h1>
     <p class="sub">Артём Ершов, психолог в интегративном подходе. С 2015 года работаю со взрослыми людьми. Специализируюсь на тревоге, самооценке, отношениях, выгорании, фобиях и страхах.</p>
     <div class="acts">
@@ -341,7 +342,7 @@ footer{background:var(--teal2);color:#fff}
 
 <section class="sec cream tabsblock" id="help">
   <div class="wrap">
-    <img class="red-photo" src="img/red-full.webp" width="1300" height="872" alt="Артём Ершов" loading="lazy">
+    <picture><source media="(max-width:1100px)" srcset="img/artem-red.webp?v=3"><img class="red-photo" src="img/red-full.webp" width="1300" height="872" alt="Артём Ершов" loading="lazy"></picture>
     <div class="tb">
       <div class="tb-tabs" role="tablist" aria-label="С чем я работаю">
         <button class="tab on" role="tab" aria-selected="true" data-t="1">Внутренние кризисы</button>
