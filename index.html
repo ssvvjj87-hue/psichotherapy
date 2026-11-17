@@ -554,7 +554,7 @@ function drawSvc(){
   const x1=(t.left+t.right)/2-W.left,y1=t.bottom-W.top,x2=(c.left+c.right)/2-W.left,y2=c.top-W.top,ym=y1+(y2-y1)/2;
   line(svg,[[x1,y1],[x1,ym],[x2,ym],[x2,y2]],2);const d=document.createElementNS(NS,'circle');d.setAttribute('cx',x2);d.setAttribute('cy',y2);d.setAttribute('r',6);d.setAttribute('fill','#1999B2');svg.appendChild(d);
 }
-const IL={1:'il-diag',2:'il-kons',3:'il-group',4:'il-packages'};
+const IL={1:'il-diag',2:'il-kons',3:'il-group',4:'il-packages'};Object.values(IL).forEach(n=>{new Image().src='img/'+n+'.webp?v=3'});
 const stabs=[...document.querySelectorAll('.svc-tabs .tab')],scards=[...document.querySelectorAll('.svc-card')];
 stabs.forEach(t=>t.addEventListener('click',()=>{stabs.forEach(x=>{const on=x===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)});scards.forEach(c=>c.hidden=c.dataset.c!==t.dataset.s);document.getElementById('svc-img').src='img/'+IL[t.dataset.s]+'.webp?v=3';drawSvc()}));
 function redraw(){document.querySelectorAll('[data-scheme]').forEach(drawScheme);drawSvc();}
