@@ -547,9 +547,11 @@ function drawScheme(box){
   const svg=box.querySelector('svg.links');svg.innerHTML='';box.querySelectorAll('.num').forEach(n=>n.remove());
   const B=box.getBoundingClientRect();const items=[...box.querySelectorAll('.step')].map(e=>{const r=e.getBoundingClientRect();return{l:r.left-B.left,t:r.top-B.top,r:r.right-B.left,b:r.bottom-B.top,cx:(r.left+r.right)/2-B.left,cy:(r.top+r.bottom)/2-B.top}});
   const one=getComputedStyle(box.querySelector('.grid')).gridTemplateColumns.split(' ').length===1;
+  const els=[...box.querySelectorAll('.step')];
   if(one){const x=12;line(svg,[[x,items[0].t+30],[x,items[items.length-1].t+30]]);items.forEach((it,i)=>{line(svg,[[x,it.t+30],[it.l,it.t+30]]);num(box,x,it.t+30,i+1)});return;}
   for(let i=0;i<items.length;i++){const a=items[i],b=items[i+1];
-    if(!b){num(box,a.r-14,a.cy+40,i+1);continue}
+    if(!b){if(!els[i].classList.contains('wide'))num(box,a.r,a.cy,i+1);continue}
+    if(els[i+1].classList.contains('wide')){const xr=a.r+16;line(svg,[[a.r,a.cy-10],[xr,a.cy-10],[xr,b.cy],[b.r,b.cy]]);num(box,a.r,a.cy-10,i+1);num(box,b.r,b.cy,i+2);continue}
     if(Math.abs(a.t-b.t)<5){ // соседи в ряду: линия посередине, номер на стыке
       const y=Math.min(a.cy,b.cy);line(svg,[[a.r,y],[b.l,y]]);num(box,a.r,y,i+1);
     } else { // переход на следующий ряд: от правого края вниз и влево к верху следующей карточки
