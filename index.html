@@ -41,7 +41,7 @@ h2{font-size:35px;line-height:54px;font-weight:700;color:var(--black)}
 .sec[id]{scroll-margin-top:60px}
 
 /* кнопки */
-.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 20px;border-radius:10px;font:400 18px/1 "Manrope",Arial,sans-serif;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s,transform .2s}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:48px;padding:0 20px;white-space:nowrap;border-radius:10px;font:400 18px/1 "Manrope",Arial,sans-serif;text-decoration:none;cursor:pointer;border:2px solid transparent;transition:background-color .2s,color .2s,border-color .2s,box-shadow .2s,transform .2s}
 .btn-or{background:var(--orange);color:#fff}
 .btn-or:hover{background:var(--orange-h);box-shadow:0 6px 16px rgba(245,124,0,.35);transform:translateY(-1px)}
 .btn-line{border-color:var(--teal2);color:var(--teal2);background:transparent}
@@ -80,8 +80,8 @@ header{background:var(--cream);position:sticky;top:0;z-index:50}
 .hero h1{position:relative;font-size:50px;line-height:55px;font-weight:800;color:var(--ink);max-width:733px;padding-top:50px}
 .hero .sub{position:relative;font-size:18px;line-height:28px;font-weight:500;color:var(--ink);max-width:582px;margin-top:24px}
 .hero .acts{position:relative;display:flex;gap:12px;margin-top:28px}
-.hero .acts .btn-or{width:287px}
-.hero .acts .btn-line{width:156px}
+.hero .acts .btn-or{min-width:287px}
+.hero .acts .btn-line{min-width:156px}
 .stats{position:absolute;left:0;top:460px;width:661px;height:130px;background:var(--cream);border-radius:10px;box-shadow:2px 5px 10px rgba(165,161,161,.56);display:grid;grid-template-columns:182px 176px 1fr;align-items:start;padding-top:26px}
 .stat{display:flex;gap:12px;padding:0 0 0 13px;border-right:2px solid #F3EDE9;height:78px}
 .stat:last-child{border:0}
@@ -126,7 +126,7 @@ a.pc-card:hover .pc-arrow svg{stroke:var(--teal);transform:translateX(3px)}
 
 /* ===== вкладки «С чем помогаю» (код дизайнера: tab/card/mark) ===== */
 .tabsblock{min-height:630px;padding-top:32px;padding-bottom:40px}
-.red-photo{position:absolute;left:-20px;top:-21px;width:970px;max-width:none;pointer-events:none;z-index:0}
+.red-photo{position:absolute;left:-230px;top:-21px;width:970px;max-width:none;pointer-events:none;z-index:0}
 .tb{position:relative;z-index:1;display:grid;grid-template-columns:256px 1fr;gap:44px;margin-left:236px;align-items:start}
 .tb-tabs{display:flex;flex-direction:column;gap:5px}
 .tab{position:relative;height:42px;border:2px solid transparent;border-radius:5px;background:var(--cream);box-shadow:var(--shadow-tab);font:400 18px/1 "Manrope",Arial,sans-serif;color:#2E2E2E;cursor:pointer;transition:background .2s,color .2s}
