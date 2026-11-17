@@ -444,7 +444,7 @@ footer{background:var(--teal2);color:#fff}
         <button class="tab" role="tab" aria-selected="false" data-s="4">Пакеты сессий</button>
       </div>
       <div class="svc-body">
-        <img id="svc-img" src="img/il-diag.webp?v=2" alt="" loading="lazy">
+        <img id="svc-img" src="img/il-diag.webp?v=3" alt="" loading="lazy">
         <div>
           <div class="svc-card" data-c="1"><h3><img src="img/i-diagnostics.webp" alt="">Диагностика</h3><p>Ознакомительная встреча, на которой вы можете рассказать о своей ситуации и почувствовать, комфортно ли вам со мной как со специалистом. Где я помогаю прояснить суть запроса, даже если сейчас он ощущается размытым, и даю первичное понимание возможного пути работы.</p><div class="kv"><b>Формат:</b> онлайн<br><b>Длительность:</b> 60 минут<br><b>Стоимость:</b> 2 500 ₽ <s>5 000 ₽</s> — скидка 50% на первую консультацию</div></div>
           <div class="svc-card" data-c="2" hidden><h3><img src="img/i-online.webp" alt="">Консультация</h3><p>Глубокая работа с конкретным запросом. На консультации мы проясняем запрос, выходим на причинный уровень и мягко прорабатываем его, снижая эмоциональное и внутреннее напряжение. Даже одна сессия помогает вернуть ясность, опору и более устойчивое состояние.</p><div class="kv"><b>Формат:</b> онлайн<br><b>Длительность:</b> 60 минут<br><b>Стоимость:</b> 5 000 ₽</div></div>
@@ -556,7 +556,7 @@ function drawSvc(){
 }
 const IL={1:'il-diag',2:'il-kons',3:'il-group',4:'il-packages'};
 const stabs=[...document.querySelectorAll('.svc-tabs .tab')],scards=[...document.querySelectorAll('.svc-card')];
-stabs.forEach(t=>t.addEventListener('click',()=>{stabs.forEach(x=>{const on=x===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)});scards.forEach(c=>c.hidden=c.dataset.c!==t.dataset.s);document.getElementById('svc-img').src='img/'+IL[t.dataset.s]+'.webp?v=2';drawSvc()}));
+stabs.forEach(t=>t.addEventListener('click',()=>{stabs.forEach(x=>{const on=x===t;x.classList.toggle('on',on);x.setAttribute('aria-selected',on)});scards.forEach(c=>c.hidden=c.dataset.c!==t.dataset.s);document.getElementById('svc-img').src='img/'+IL[t.dataset.s]+'.webp?v=3';drawSvc()}));
 function redraw(){document.querySelectorAll('[data-scheme]').forEach(drawScheme);drawSvc();}
 window.addEventListener('load',redraw);window.addEventListener('resize',()=>{clearTimeout(window.__rt);window.__rt=setTimeout(redraw,120)});
 if(document.fonts)document.fonts.ready.then(redraw);
