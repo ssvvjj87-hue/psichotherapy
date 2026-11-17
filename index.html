@@ -107,8 +107,9 @@ nav a:hover{color:var(--teal-dark)}
 @media (max-width:760px){.panel ul{grid-template-columns:1fr}.panel{padding:8px 20px}}
 
 /* обо мне */
-.about-grid{display:grid;grid-template-columns:400px 1fr;gap:56px;align-items:start}
-.about .photo img{max-width:360px;margin:0 auto}
+.about-grid{display:grid;grid-template-columns:5fr 6fr;gap:48px;align-items:start}
+.about .photo{position:sticky;top:80px}
+.about .photo img{width:100%;max-width:520px;margin:0 auto}
 .quals{display:grid;gap:16px;margin:24px 0}
 .qual{display:grid;grid-template-columns:56px 1fr;gap:16px;background:var(--card);border-radius:var(--radius);padding:20px}
 .qual img{width:56px;height:56px;object-fit:contain}
@@ -121,7 +122,7 @@ nav a:hover{color:var(--teal-dark)}
 .docs button{padding:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--card);cursor:zoom-in;text-align:left;font:inherit;color:inherit}
 .docs img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .docs span{display:block;padding:12px 14px;font-size:var(--fs-small);color:var(--soft)}
-@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:24px}.about .photo{max-width:340px;margin:0 auto}}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr;gap:24px}.about .photo{position:static;max-width:420px;margin:0 auto}}
 @media (max-width:480px){.docs{grid-template-columns:1fr}}
 dialog{border:0;padding:0;border-radius:12px;max-width:94vw;background:#fff}
 dialog::backdrop{background:rgba(30,43,47,.75)}
