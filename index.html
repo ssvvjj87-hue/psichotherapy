@@ -15,8 +15,8 @@
 <style>
 /* Один шрифт и пять размеров — ничего не «прыгает»: размеры меняются только один раз, на телефоне. */
 :root{
-  --bg:#F7F5F2; --card:#FFFFFF; --ink:#1E2B2F; --soft:#5B6B6F;
-  --teal:#1A97AF; --teal-dark:#137B8F; --tint:#E7F3F5; --line:#E4E0DA;
+  --bg:#EFE6DA; --card:#FFFFFF; --ink:#1E2B2F; --soft:#5B6B6F;
+  --teal:#1A97AF; --teal-dark:#137B8F; --tint:#E7F3F5; --line:#DED3C4;
   --fs-h1:48px; --fs-h2:36px; --fs-h3:20px; --fs-body:17px; --fs-small:15px;
   --gap:72px; --radius:20px;
 }
@@ -45,7 +45,7 @@ section{padding:var(--gap) 0;scroll-margin-top:64px}
 @media (max-width:480px){.actions .btn{width:100%}}
 
 /* шапка */
-header{position:sticky;top:0;z-index:20;background:rgba(247,245,242,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:20;background:rgba(239,230,218,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
 .logo{color:var(--ink);text-decoration:none;font-weight:700;font-size:17px;line-height:1.2}
 .logo span{display:block;font-weight:400;font-size:13px;color:var(--soft)}
@@ -72,7 +72,6 @@ nav a:hover{color:var(--teal-dark)}
 .facts dt{font-size:28px;font-weight:700;color:var(--teal-dark);line-height:1}
 .facts dd{margin:8px 0 0;font-size:var(--fs-small);color:var(--soft)}
 .photo{position:relative;padding-top:24px}
-.photo::before{content:"";position:absolute;left:6%;right:6%;top:14%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,#E3F2F5 0%,#D3EBF0 70%)}
 .photo img{position:relative;width:100%;height:auto;-webkit-mask-image:linear-gradient(180deg,#000 80%,transparent 100%);mask-image:linear-gradient(180deg,#000 80%,transparent 100%)}
 @media (max-width:900px){
   .hero{padding-top:40px}
@@ -112,7 +111,6 @@ nav a:hover{color:var(--teal-dark)}
 
 /* обо мне */
 .about-grid{display:grid;grid-template-columns:380px 1fr;gap:64px;align-items:start}
-.about .photo::before{background:radial-gradient(circle at 50% 40%,#F2EADF 0%,#E8DCCB 70%);left:4%;right:4%;top:10%}
 .about .photo img{max-width:340px;margin:0 auto}
 .chips{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:8px 0 32px;padding:0}
 .chips li{background:var(--tint);color:var(--teal-dark);font-size:var(--fs-small);font-weight:600;padding:8px 16px;border-radius:999px}
